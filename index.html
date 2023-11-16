@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rodízio de Placas</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/car_icon.png">
+</head>
+
+<body>
+
+    <div class="divisoria">Restrições de tráfego - ATENÇÃO - Rodízio de Placas</div>
+    <div class="divTittle">RESTRIÇÕES DE CIRCULAÇÃO</div>
+    <div class="divisoria">Restrições de tráfego - ATENÇÃO - Rodízio de Placas</div>
+
+    <p>
+        <label for="diaSemana">Dia da semana:</label>
+        <select id="diaSemana">
+            <option value="segunda">Segunda-feira</option>
+            <option value="terça">Terça-feira</option>
+            <option value="quarta">Quarta-feira</option>
+            <option value="quinta">Quinta-feira</option>
+            <option value="sexta">Sexta-feira</option>
+        </select>
+    </p>
+
+    <br>
+
+    <p>
+        <label for="finalPlaca">Final da Placa (1 a 9, 0):</label>
+        <input type="number" id="finalPlaca" min="0" max="9" step="1">
+    </p>
+
+    <button onclick="verificarRestricoes()">Verificar</button>
+
+    <p>
+    <div id="opcaoRestricao" style="display: none;">
+        <label for="opcao">Você passará por uma área restrita (área vermelha ou via limítrofe)?</label>
+        <input type="radio" id="opcao" name="opcaoRestricao" value="áreaVermelha">Área Vermelha
+        <input type="radio" id="opcao" name="opcaoRestricao" value="viaLimítrofe">Via Limítrofe
+        </p>
+
+        <button onclick="verificarOpcaoRestricao()">Continuar</button>
+    </div>
+
+    <p>
+    <div id="tipoVeiculo" style="display: none;">
+
+        <label for="tipo">Você dirige caminhão ou automóvel na via limítrofe?</label>
+        <input type="radio" id="tipo" name="tipoVeiculo" value="caminhão">Caminhão
+        <input type="radio" id="tipo" name="tipoVeiculo" value="automóvel">Automóvel
+        </p>
+
+        <button onclick="verificarTipoVeiculo()">Verificar</button>
+    </div>
+
+    <p>
+    <div id="mensagem"></div>
+    </p>
+
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
